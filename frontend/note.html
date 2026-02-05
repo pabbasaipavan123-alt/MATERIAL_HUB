@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Note Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">GetMaterial</div>
+    <nav class="nav">
+      <a href="index.html">Notes</a>
+      <a href="admin.html">Upload</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="noteMeta" class="note-meta"></section>
+    <div class="note-actions">
+      <button id="deleteNoteBtn" class="danger">Delete Note</button>
+    </div>
+    <section class="viewer">
+      <embed id="pdfFrame" type="application/pdf" />
+      <div class="viewer-fallback">
+        <a id="pdfFallback" href="#" target="_blank" rel="noopener">Open PDF in new tab</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

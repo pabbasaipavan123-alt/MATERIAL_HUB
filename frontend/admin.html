@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload Note</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">MaterialHub</div>
+    <nav class="nav">
+      <a href="index.html">Notes</a>
+      <a href="admin.html" class="active">Upload</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Upload Notes</h1>
+      <p>Share new PDFs with clean metadata.</p>
+    </section>
+
+    <form id="uploadForm" class="card form">
+      <label>
+        Title
+        <input type="text" name="title" required />
+      </label>
+
+      <label>
+        Subject
+        <input type="text" name="subject" required />
+      </label>
+
+      <label>
+        Semester
+        <input type="number" name="semester" min="1" required />
+      </label>
+
+      <label>
+        PDF File
+        <input type="file" name="pdf" accept="application/pdf" required />
+      </label>
+
+      <button type="submit">Upload</button>
+      <div id="formMsg" class="form-msg"></div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
