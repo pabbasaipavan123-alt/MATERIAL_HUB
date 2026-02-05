@@ -14,15 +14,8 @@ cloudinary.config({
 const storage = multer.memoryStorage();
 const upload = multer({
   storage,
-  limits: { fileSize: 25 * 1024 * 1024 }, 
-  fileFilter: (req, file, cb) => {
-    if (file.mimetype !== "application/pdf") {
-      return cb(new Error("Only PDF files are allowed"));
-    }
-    cb(null, true);
-  }
+  limits: { fileSize: 25 * 1024 * 1024 }
 });
-
 
 router.post("/upload", upload.single("pdf"), async (req, res) => {
   try {
@@ -43,7 +36,6 @@ router.post("/upload", upload.single("pdf"), async (req, res) => {
           {
             resource_type: "auto",
             folder: "notes",
-            format: "pdf",
             use_filename: true,
             unique_filename: true
           },
