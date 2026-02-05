@@ -1,4 +1,4 @@
-const API_BASE = "https://material-hub-al3n.onrender.com/";
+const API_BASE = "https://material-hub-al3n.onrender.com/api";
 
 
 
