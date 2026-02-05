@@ -199,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pdfFrame.src = note.pdfUrl;
       if (pdfFallback) {
         pdfFallback.href = note.pdfUrl;
+        pdfFallback.textContent = "Open PDF in new tab";
       }
     } catch (err) {
       noteMeta.innerHTML = "<p>Failed to load note.</p>";
